@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3" *ngFor="let data of Alldata">
+      <div
+        class="card d-flex justify-content-center align-items-center"
+        style="width: 18rem"
+      >
+        <img
+          routerLink="/merchandiseproductDetails/{{ data._id }}"
+          [src]="Url + data.imagedetails[0].ImageUrl"
+          class="card-img-top"
+          alt="hello"
+          style="width: 200px; height: 200px"
+        />
+        <div class="d-flex">
+          <h2 class="text-center mx-2 p-2">{{ data.name }}</h2>
+          <h2 class="mx-2 p-2">Price {{ data.price }}</h2>
+        </div>
+
+        <div class="card-body d-flex justify-content-center">
+          <!-- <a href="#" class="btn btn-primary m-2">see more</a> -->
+          <a
+            routerLink="/merchandiseproductDetails/{{ data._id }}"
+            class="btn btn-primary m-2"
+            >Add to cart</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

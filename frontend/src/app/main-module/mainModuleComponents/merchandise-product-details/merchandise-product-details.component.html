@@ -1,0 +1,56 @@
+<div class="container parent-container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-4 d-flex flex-column align-items-center">
+      <div class="images-grid">
+        <div
+          class="image-container"
+          *ngFor="let images of productArray?.imagedetails"
+        >
+          <img
+            [src]="Url + images.ImageUrl"
+            class="image"
+            alt="..."
+            style="width: 200px"
+          /><br /><br />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4 d-flex flex-column align-items-center">
+      <h1>{{ productArray?.name }}</h1>
+      <h3><b>Price:</b> {{ productArray?.price }}</h3>
+
+      <div>
+        <button class="btn btn-primary m-2" (click)="minus()">-</button>
+
+        <input
+          class="m-5"
+          type="text"
+          value="0"
+          class="text-center"
+          style="width: 50px"
+          #ItemQuantity
+          readonly
+        />
+        <button class="btn btn-primary m-2" (click)="plus()">+</button>
+      </div>
+
+      <button
+        *ngIf="!removeCart"
+        class="btn-success w-75 mt-5 p-3 border-0"
+        [disabled]="itemQuantityDefault > 0 ? false : true"
+        (click)="AddtoCart()"
+      >
+        Add to Cart
+      </button>
+
+      <button
+        *ngIf="removeCart"
+        class="btn-danger w-75 mt-5 p-3 border-0"
+        (click)="removeFromCart(productArray._id)"
+      >
+        Remove from Cart
+      </button>
+    </div>
+  </div>
+</div>

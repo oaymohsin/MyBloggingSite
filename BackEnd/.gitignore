@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Testing
+/coverage/
+
+# TypeScript build output
+/build/
+/out/
+

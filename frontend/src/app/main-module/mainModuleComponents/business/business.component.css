@@ -1,0 +1,16 @@
+.card{
+    box-shadow: -2px 2px 9px 3px rgba(11, 11, 11, 0.3);
+}
+
+/* In this example:
+
+h-shadow is 4px (rightwards offset),
+v-shadow is 4px (downwards offset),
+blur is 8px (blur radius),
+spread is 0 (no spread),
+color is rgba(0, 0, 0, 0.2) (black color with 20% opacity). */
+
+.card:hover{
+    box-shadow: -4px 4px 9px 3px rgba(11, 11, 11, 0.3);
+    
+}

@@ -1,0 +1,19 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  font-size: large;
+  margin-bottom: 10px;
+}
+li > h1 {
+  font-size: 30px !important;
+  font-weight: 500;
+  /* color: blue; */
+}
+
+ul li:last-child {
+  font-size: 20px !important;
+  font-weight: 500;
+}

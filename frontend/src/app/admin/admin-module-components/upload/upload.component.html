@@ -1,0 +1,72 @@
+<button class="btn btn-outline-primary m-5" (click)="showSnackBar()">
+  Show SnackBar
+</button>
+
+<br /><br /><br />
+<div class="d-flex align-items-center father w-75 m-auto" style="height: 100vh">
+  <div class="container w-50 container-custom">
+    <form (ngSubmit)="submitUploadForm()" [formGroup]="myuploadform">
+      <div class="row">
+        <div class="col-sm-12 d-flex justify-content-center">
+          <h2 class="text-center w-75 text-white p-3">UPLOAD DATA</h2>
+        </div>
+        <div class="col-sm-12 form-group">
+          <label for="name-f" class="">Title</label>
+          <input
+            type="text"
+            class="form-control bg-transparent input-control p-2"
+            name="fname"
+            id="name-f"
+            placeholder="Enter your first name."
+            required
+            formControlName="title"
+          />
+        </div>
+        <div class="col-sm-12 form-group">
+          <label for="name-l">Description</label><br />
+          <!-- <input type="text" class="form-control p-3" name="lname" id="name-l" placeholder="Enter your last name." required> -->
+          <textarea
+            id="w3review"
+            class="form-control p-3 bg-transparent"
+            rows="4"
+            cols="50"
+            required
+            formControlName="description"
+          ></textarea>
+        </div>
+        <div class="col-sm-12 form-group">
+          <label for="name-l">Category</label><br />
+          <!-- <input type="text" class="form-control p-3" name="lname" id="name-l" placeholder="Enter your last name." required> -->
+          <select
+            name="selectcategory"
+            id=""
+            class="form-control"
+            placeholder="selectcategory"
+            formControlName="category"
+          >
+            <option *ngFor="let item of category">{{ item }}</option>
+          </select>
+        </div>
+
+        <div class="col-sm-12 form-group mb-3">
+          <label for="name-l">Image</label>
+          <input
+            type="file"
+            class="form-control bg-transparent p-2"
+            name="lname"
+            id="name-l"
+            placeholder="Enter your last name."
+            required
+            multiple
+            (change)="getimages($event)"
+            #FileSelect
+          />
+          <p style="opacity: 0.6" class="mt-0">Image Should be in 16:9 ratio</p>
+        </div>
+        <div class="col-sm-12 form-group mt-3 mb-0 d-flex">
+          <button class="btn p-3 w-75 m-auto btn-dark">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

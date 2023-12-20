@@ -1,0 +1,12 @@
+.container-custom {
+  margin-top: 30px;
+  background-color: #f1eded;
+  /* box-shadow: -2px 1px 10px 1px; */
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 30px 10px 60px 100px;
+  border: 1px solid black;
+}
+.container-custom:hover {
+  box-shadow: -2px 1px 10px 1px;
+}

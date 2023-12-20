@@ -1,0 +1,81 @@
+<div class="container mt-5 mb-5">
+  <div class="row g-0 p-3">
+    <div class="col-8">
+      <div
+        class="card mb-3"
+        style="max-width: 90%"
+        *ngFor="let cart of CartArray"
+      >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              [src]="Url + cart.imagedetails[0].ImageUrl"
+              class="img-fluid rounded-start"
+              alt="..."
+              style="height: 150px; width: 150px"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <!-- <h2 class="card-title" hidden #getproductId>
+                  {{ cart.productId }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </h2> -->
+
+              <h1 class="card-title mb-1">{{ cart.name }}</h1>
+              <h3 class="card-title mb-1">
+                Quantity: &nbsp;&nbsp;
+                <span>{{ cart.productQuantity }}</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              </h3>
+
+              <h3 class="card-title text-capitalize">
+                Price Single Item:&nbsp;&nbsp;{{ cart.price }}
+              </h3>
+
+              <!-- <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p> -->
+              <button
+                class="btn-danger p-2"
+                (click)="removeItemfromCart(cart.productId)"
+              >
+                Remove from Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="order-summary">
+        <ul>
+          <li class="d-flex justify-content-center">
+            <h1 class="h1">Order Summary</h1>
+          </li>
+          <li class="d-flex justify-content-between px-5">
+            Balance Amount <span>{{ CartSummary.amount }}</span>
+          </li>
+          <li class="d-flex justify-content-between px-5">
+            Tax <span>{{ CartSummary.Tax }}</span>
+          </li>
+          <li class="d-flex justify-content-between px-5">
+            Delivery <span>{{ CartSummary.Delivery }}</span>
+          </li>
+          <li class="d-flex justify-content-between px-5">
+            Discount <span>{{ CartSummary.Discount }}</span>
+          </li>
+          <hr />
+          <li class="d-flex justify-content-between px-5 mt-3">
+            Total <span>{{ CartSummary.Total }}</span>
+          </li>
+          <li class="d-flex justify-content-between mt-3">
+            <button class="btn btn-success w-100" (click)="checkout()">
+              Checkout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

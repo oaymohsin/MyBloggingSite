@@ -1,0 +1,29 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let data of SportData">
+            <div class="card" style="width: 18rem;">
+                <img [src]="Url+data.imagedetails[0].ImageUrl" class="card-img-top " alt="..." style="width: 200px; height: 200px;">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.title}}</h5>
+                  <p class="card-text">{{data.description}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div> -->
+<div class="container w-auto d-flex justify-content-center  mt-4 mb-4">
+  <div class="row w-75  m-2 ">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 " *ngFor="let data of SportData">
+      <div class="card  m-2  " style="width: auto;">
+        <a href=""><img [src]="Url + data.imagedetails[0].ImageUrl" class="card-img-top img-fluid" alt="..." style="width: 600px; height: 350px;"></a>
+        <div class="card-body ">
+          <h2 class="card-title">{{data.title}}</h2>
+          <p class="card-text">
+            {{data.description.substring(0, 40)}} ............</p>
+          <a href="#" class="btn btn-small btn-dark">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="d-flex justify-content-center">
+  <img
+    class=""
+    src="assets/images/logo.png"
+    alt="logo"
+    style="width: 200px; height: 200px"
+  />
+</div>
+
+<div class="container d-flex justify-content-center">
+  <nav
+    class="navbar navbar-expand-lg navbar-light w-100"
+    style="background-color: #e3f2fd"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/techandtelecom"
+              >Tech and Telecom</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/business">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/sports">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/education">Education</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              routerLink="/pakistan"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pakistan
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" routerLink="/pakistan">Social</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/pakistan">Career</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/pakistan">Videos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/merchandise">Merchandise Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blogs">Blogs</a>
+          </li>
+          <!-- <li class="nav-item d-flex">
+            <a class="nav-link"><i class="fa-solid fa-user"></i></a>
+          </li> -->
+        </ul>
+        <a *ngIf="!check" class="nav-link" routerLink="/management/sign-in"
+          ><i class="fa-solid fa-user"></i> Login</a
+        >
+        <a class="nav-link text-danger" routerLink="/cartdetails">
+          CART({{ CartItems }})</a
+        >
+        <a
+          *ngIf="check"
+          class="nav-link text-danger"
+          routerLink="/management/sign-out"
+          ><i class="fa-solid fa fa-sign-out"></i> Log Out</a
+        >
+      </div>
+    </div>
+  </nav>
+</div>

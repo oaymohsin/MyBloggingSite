@@ -1,0 +1,13 @@
+
+
+<div class="container parent-container">
+    <div class="title">{{productArray?.title}}</div>
+    <div class="images-grid">
+        <div class="image-container" *ngFor="let images of productArray?.imagedetails" >
+        <img  [src]="Url + images.ImageUrl" class="image " alt="..." ><br><br>
+        </div>
+    </div>
+    <div class="details">
+        {{productArray?.description}}
+    </div>
+</div>
