@@ -1,4 +1,5 @@
 const Package=require('../package.json')
+require('dotenv')
 
 const mongoose=require('mongoose')
 async function connectToMongoDB(){

@@ -1,8 +1,7 @@
 //Block Start Dependencies
 const express = require('express');
 const cors = require('cors')
-// const dotenv = require('dotenv');
-// dotenv.config();
+// require("dotenv/config");
 const ApplicationConfiguration = require('./configuration/ApplicationConfiguration')
 const ResponseofMyDataBase = require('./configuration/DataBaseConfiguration')
 //Block End Dependencies
